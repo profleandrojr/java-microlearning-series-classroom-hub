@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --codecept-green: #475c4d;
+  --codecept-grey: #3a3632;
+  --codecept-purple: #47495c;
+  --text-primary: #ffffff;
+  --text-secondary: #8b949e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: var(--codecept-grey);
+  color: var(--text-primary);
+  font-family: "Red Hat Display", sans-serif;
+  background-image: url("img/coder-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hub-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  align-items: center;
+}
+
+header {
+  margin-top: 0;
+  align-items: center;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid var(--codecept-green);
+  margin-bottom: 30px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.btn {
+  border: 1px solid var(--text-secondary);
+  padding: 15px 30px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--codecept-green);
+  box-shadow: 0 0 10px var(--codecept-purple);
+  margin: 2rem 0;
+  border-radius: 1rem;
+}
+
+.btn:hover {
+  background: var(--codecept-green);
+  color: #fff;
+  box-shadow: 0 0 15px var(--codecept-green);
+}
+
+/* MOBILE | RESPONSIVE */
+@media (min-width: 768px) {
+  body .hub-container {
+    grid-template-columns: 1fr;
+    font-size: 2rem;
+  }
+
+  header img {
+    grid-column: 1 / -1;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
