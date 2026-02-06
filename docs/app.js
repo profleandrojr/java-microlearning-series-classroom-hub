@@ -9,3 +9,12 @@ const info = document.getElementById("class-info");
 
 btn.href = activeClass.link;
 info.innerText = `Connected to: ${activeClass.name} (Active)`;
+
+/* GOOGLE ANALYTICS METRICS FOR JOIN METRICS */
+document.getElementById("join-btn").addEventListener("click", function () {
+  gtag("event", "join_cohort_click", {
+    event_category: "engagement",
+    event_label: "Cohort #001",
+    value: 1,
+  });
+});
